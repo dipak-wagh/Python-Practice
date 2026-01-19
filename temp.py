@@ -1,19 +1,11 @@
-low,high=2,10
-primes=[]
+def recurfun(number,reverse):
+    if number==0:
+        return reverse
+    remainder = int(number%10)
+    reverse = (reverse*10)+remainder
+    return recurfun(int(number/10),reverse)
 
-for i in range(low,high+1):
-    flag=0
-
-    if i<2:
-        continue
-    if i==2:
-        primes.append(2)
-        continue
-    for j in range(2,i):
-        if i%j==0:
-            flag=1
-            break
-    if flag==0:
-        primes.append(i)
-
-print(primes)
+number=input("Enter the number:")
+reverse=0
+result = recurfun(number,reverse)
+print("Reverse no is:",result)
