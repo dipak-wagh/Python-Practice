@@ -1,11 +1,5 @@
-def recurfun(number,reverse):
-    if number==0:
-        return reverse
-    remainder = int(number%10)
-    reverse = (reverse*10)+remainder
-    return recurfun(int(number/10),reverse)
+def Add(a,b):
+    return a+b
 
-number=input("Enter the number:")
-reverse=0
-result = recurfun(number,reverse)
-print("Reverse no is:",result)
+result = Add(2,3,4)
+print("Result is:",result)
